@@ -2,3 +2,7 @@
 
 
 # Imprima todos os itens da sua lista de índice par. Imprima o índice e o item.
+lista = list(range(1, 61))
+for i in lista:
+    if i % 2 == 0:
+        print(f"Índice: {i-1}  Item: {i}")

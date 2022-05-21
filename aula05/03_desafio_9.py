@@ -44,4 +44,4 @@ The only thing I'll ever ask of you
 You've got to promise not to stop when I say when
 """
 
-
+print(everlong_foo_fighters.replace("\n"," "))

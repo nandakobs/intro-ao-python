@@ -2,7 +2,12 @@
 # Você quer criar um sistema no qual suas alunas podem ver suas notas digitando o nome.
 # As listas de alunas e notas se encontra abaixo. As notas podem variar de 0 a 100.
 # Nessas listas, as notas estão na mesma ordem dos nomes, ou seja, a aluna no índice 4 tirou a nota no índice 4.
-alunas = ['Adriana', 'Bárbara', 'Franciele', 'Laís', 'Maria', 'Nayara', 'Patrícia', 'Renata', 'Sarah', 'Thainá']
+from operator import index
+from time import sleep
+
+
+alunas = ['Adriana', 'Bárbara', 'Franciele', 'Laís', 'Maria',
+          'Nayara', 'Patrícia', 'Renata', 'Sarah', 'Thainá']
 notas = [78, 57, 80, 98, 54, 89, 90, 100, 71, 85]
 
 
@@ -13,3 +18,23 @@ notas = [78, 57, 80, 98, 54, 89, 90, 100, 71, 85]
 # Notas abaixo de 60 devem ser impressas com a cor vermelha, e notas a partir de 90 devem ser
 # impressas com a cor verde.
 # Se o nome digitado não existir na lista, imprima uma mensagem de erro usando a cor vermelha.
+print("="*33)
+print(" Notas de Ciências - 1° Bimestre ")
+print("="*33)
+aluna = input("\nInsira seu nome: ")
+print("\nVerificando ", end="")
+sleep(4)
+print(".", end="")
+sleep(4)
+print(".", end="")
+sleep(4)
+print(".\n")
+sleep(4)
+if aluna in alunas:
+    nota = notas[alunas.index(aluna)]
+    if nota >= 60:
+        print(f"\nAluna: {aluna}  Nota: \033[32m{nota}")
+    else:
+        print(f"\nAluna: {aluna}  Nota: \033[31m{nota}")
+else:
+    print("\n\033[31mERRO: Aluna não encontrada.")
