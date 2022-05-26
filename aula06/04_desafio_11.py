@@ -4,3 +4,8 @@
 # Exemplo de saída: !saleDurtsnoC od nohtyP ed\nosruc od sasohlivaram serehlum iO
 
 arquivo = 'entrada_desafio_11.txt'
+with open(arquivo, 'r') as arquivo:
+    conteudo = arquivo.read()
+
+with open('contrario', 'w') as arquivo_contrario:
+    arquivo_contrario.write(conteudo[::-1])
